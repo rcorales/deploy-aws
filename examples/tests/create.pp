@@ -1,9 +1,9 @@
 # This will create a set of instances, load balancers and security groups in the
 # specified AWS region.
 
-ec2_securitygroup { 'test-sg':
-  region => 'us-east-2',
-}
+#ec2_securitygroup { 'test-sg':
+#  region => 'us-east-2',
+#}
 
 ec2_instance { 'test-instance':
   region            => 'us-east-2',
