@@ -56,7 +56,7 @@ ec2_securitygroup { 'db-sg':
 ec2_instance { ['web-1', 'web-2']:
   ensure          => present,
   image_id        => 'ami-af8b30cf', # EU 'ami-b8c41ccf',
-  subnet          => 10.9.12.0/24,
+  subnet          => 172.30.40.0/24,
   security_groups => ['web-sg'],
   instance_type   => 't2.micro',
   tenancy         => 'default',
@@ -70,7 +70,7 @@ ec2_instance { ['web-1', 'web-2']:
 ec2_instance { 'db-1':
   ensure          => present,
   image_id        => 'ami-af8b30cf', # EU 'ami-b8c41ccf',
-  subnet          => 10.9.13.0/24,
+  subnet          => 172.30.41.0/24,
   security_groups => ['db-sg'],
   instance_type   => 't2.micro',
   monitoring      => true,
