@@ -14,7 +14,7 @@ elb_loadbalancer { 'test-lb':
   region => 'us-east-2',
 }
 
-ec2_securitygroup { 'lb-sg':
+ec2_securitygroup { 'test-sg':
   ensure      => present,
   description => 'Security group for load balancer',
   ingress     => [{
